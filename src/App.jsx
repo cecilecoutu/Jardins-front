@@ -1,11 +1,21 @@
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import BestPlaces from "./pages/BestPlaces";
-import PlaceOfTheDay from "./pages/PlaceOfTheDay";
+import RegionAuvergneRhoneAlpes from "./pages/RegionAuvergne-Rhone-Alpes";
+import RegionBretagne from "./pages/RegionBretagne";
+import RegionBourgogne from "./pages/RegionBourgogneFrancheComte";
+import RegionCentreValDeLoire from "./pages/RegionCentreValdeLoire";
+import RegionGrandest from "./pages/RegionGrandEst";
+import RegionHautsDefrance from "./pages/RegionHautsdeFrance";
+import RegionIleDeFrance from "./pages/RegionIleDeFrance";
+import RegionMartinique from "./pages/RegionMartinique";
+import RegionNormandie from "./pages/RegionNormandie";
+import RegionNouvelleAquitaine from "./pages/RegionNouvelleAquitaine";
+import RegionOccitanie from "./pages/RegionOccitanie";
+import RegionPaysdeLoire from "./pages/RegionPaysDeLoire";
+import RegionProvenceAlpesCotesDazur from "./pages/RegionProvenceAlpesCotesDazur";
+
 import Navbar from "./components/Navbar";
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
@@ -15,14 +25,14 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/best-places" element={<BestPlaces />} />
-        <Route path="/place-of-the-day" element={<PlaceOfTheDay />} />
-        <Route path="/region-auvergne" element={<RegionAuvergne />} />
+
+        <Route path="/region-auvergne" element={<RegionAuvergneRhoneAlpes />} />
         <Route path="/region-bretagne" element={<RegionBretagne />} />
         <Route
           path="/region-centre-val-de-loire"
           element={<RegionCentreValDeLoire />}
         />
+        <Route path="/region-bourgogne" element={<RegionBourgogne />} />
         <Route path="/region-grand-est" element={<RegionGrandEst />} />
         <Route
           path="/region-hauts-de-france"
