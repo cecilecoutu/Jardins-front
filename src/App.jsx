@@ -15,7 +15,7 @@ import RegionPaysdeLoire from "./pages/RegionPaysDeLoire";
 import RegionProvenceAlpesCotesDazur from "./pages/RegionProvenceAlpesCotesDazur";
 
 import Navbar from "./components/Navbar";
-import { useState } from "react";
+
 import "./App.css";
 
 function App() {

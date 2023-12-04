@@ -12,6 +12,7 @@ import nouvelleaquitaine from "../assets/les-bambous-de-planbuisson6.jpeg";
 import paysdelaloire from "../assets/les-jardins-du-marais-herbignac-1143144-3e9301e94429496a8960663847fd0d45.jpeg";
 import iledefrance from "../assets/marly2.jpeg";
 import provencealpescotesdazur from "../assets/puymeras.jpeg";
+import occitanie from "../assets/bambous-occitanie.png";
 import { Link } from "react-router-dom/";
 
 function HomePage(props) {
@@ -25,24 +26,63 @@ function HomePage(props) {
 
   return (
     <div>
-      <div style={styleContainer}>
+      <div>
         <img src={auvergnerhonealpes} />
         <Link to={"/region-auvergne"}>Auvergne</Link>
       </div>
-      <Link to={"/region-bretagne"}>Bretagne</Link>
-      <Link to={"/region-centre-val-de-loire"}>Centre Val de Loire</Link>
-      <Link to={"/region-grand-est"}>Grand-Est</Link>
-      <Link to={"/region-hauts-de-france"}>Hauts-de-France</Link>
-      <Link to={"/region-ile-de-france"}>Ile-de-France</Link>
-      <Link to={"/region-martinique"}>Martinique</Link>
-      <Link to={"/region-normandie"}>Normandie</Link>
-      <Link to={"/region-nouvelle-aquitaine"}>Nouvelle-Aquitaine</Link>
-      <Link to={"/region-occitanie"}>Occitanie</Link>
-      <Link to={"/region-pays-de-loire"}>Pays de Loire</Link>
-      <Link to={"/region-provence-alpes-cotes-dazur"}>
-        Provence Alpes-Côtes-d'Azur
-      </Link>
-      <Link to={"/region-bourgogne"}>Bourgogne</Link>
+      <div>
+        <img src={bretagne} />
+        <Link to={"/region-bretagne"}>Bretagne</Link>
+      </div>
+      <div>
+        <img src={centre} />
+        <Link to={"/region-centre-val-de-loire"}>Centre Val de Loire</Link>
+      </div>
+      <div>
+        <img src={grandest} />
+        <Link to={"/region-grand-est"}>Grand-Est</Link>
+      </div>
+      <div>
+        <img src={hautsdefrance} />
+        <Link to={"/region-hauts-de-france"}>Hauts-de-France</Link>
+      </div>
+      <div>
+        <img src={iledefrance} />
+        <Link to={"/region-ile-de-france"}>Ile-de-France</Link>
+      </div>
+      <div>
+        <img src={martinique} />
+        <Link to={"/region-martinique"}>Martinique</Link>{" "}
+      </div>
+      <div>
+        <img src={normandie} />
+        <Link to={"/region-normandie"}>Normandie</Link>{" "}
+      </div>
+      <div>
+        <img src={nouvelleaquitaine} />
+        <Link to={"/region-nouvelle-aquitaine"}>Nouvelle-Aquitaine</Link>
+      </div>
+
+      <div>
+        <img src={occitanie} />
+        <Link to={"/region-occitanie"}>Occitanie</Link>{" "}
+      </div>
+
+      <div>
+        <img src={paysdelaloire} />
+        <Link to={"/region-pays-de-loire"}>Pays de Loire</Link>
+      </div>
+
+      <div>
+        <img src={provencealpescotesdazur} />
+        <Link to={"/region-provence-alpes-cotes-dazur"}>
+          Provence Alpes-Côtes-d'Azur
+        </Link>
+      </div>
+      <div>
+        <img src={bourgogne} />
+        <Link to={"/region-bourgogne"}>Bourgogne</Link>
+      </div>
     </div>
   );
 }
