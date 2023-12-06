@@ -10,6 +10,8 @@ function Navbar(props) {
   return (
     <nav>
       <Link to={"/"}>Home</Link>
+      <br></br>
+      <Link to={"/inspiration-du-jour"}>Inspiration du jour</Link>
     </nav>
   );
 }
