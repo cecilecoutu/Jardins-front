@@ -16,7 +16,7 @@ function Navbar(props) {
       display: "flex",
       justifyContent: "space-around",
 
-      backgroundColor: "rgb(30, 79, 36)",
+      backgroundColor: "rgb(84, 138, 91)",
       backgroundSize: "cover",
     },
   };
@@ -24,14 +24,14 @@ function Navbar(props) {
   return (
     <nav style={styles.navContainer}>
       <Link to={"/"}>
-        <img src={Home} alt="home" style={{ width: "3rem" }} />
+        <img src={Home} alt="home" style={{ width: "4rem" }} />
         <br></br>
-        Home
+        <div style={{ color: "white" }}>Home</div>
       </Link>
       <Link to={"/inspiration-du-jour"}>
-        <img src={Inspiration} alt="inspiration" style={{ width: "3rem" }} />
+        <img src={Inspiration} alt="inspiration" style={{ width: "4rem" }} />
         <br></br>
-        Inspiration du jour
+        <div style={{ color: "white" }}>Inspiration du jour</div>
       </Link>
     </nav>
   );
