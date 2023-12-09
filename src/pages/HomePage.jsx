@@ -105,9 +105,18 @@ function HomePage(props) {
       border: "1px solid rgb(193, 202, 211)",
       margin: "1rem",
       padding: "1rem",
-      boxShadow: "10px 5px 5px green",
+
       boxSizing: "content-box",
       borderRadius: "1rem",
+    },
+
+    cardImage: {
+      display: "flex",
+      width: "100%",
+      margin: "auto",
+      justifyContent: "center",
+      borderRadius: "1rem",
+      boxShadow: "0.1rem 0.1rem 0.1rem lightgrey",
     },
   };
 
@@ -143,59 +152,85 @@ function HomePage(props) {
     <div>
       <div style={styles.placesContainer}>
         <div style={styles.cardContainer}>
-          <img src={auvergnerhonealpes} style={{ width: "15rem" }} />
+          <Link to={"/region-auvergne"}>
+            <img src={auvergnerhonealpes} style={{ width: "15rem" }} />
+          </Link>
+
           <Link to={"/region-auvergne"}>Auvergne</Link>
         </div>
 
         <div style={styles.cardContainer}>
-          <img src={bourgogne} style={{ width: "15rem" }} />
+          <Link to={"/region-bourgogne"}>
+            <img src={bourgogne} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-bourgogne"}>Bourgogne</Link>
         </div>
         <div style={styles.cardContainer}>
-          <img src={bretagne} style={{ width: "15rem" }} />
+          <Link to={"/region-bretagne"}>
+            <img src={bretagne} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-bretagne"}>Bretagne</Link>
         </div>
         <div style={styles.cardContainer}>
-          <img src={centre} style={{ width: "15rem" }} />
+          <Link to={"/region-centre-val-de-loire"}>
+            <img src={centre} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-centre-val-de-loire"}>Centre Val de Loire</Link>
         </div>
         <div style={styles.cardContainer}>
-          <img src={grandest} style={{ width: "15rem" }} />
+          <Link to={"/region-grand-est"}>
+            <img src={grandest} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-grand-est"}>Grand-Est</Link>
         </div>
         <div style={styles.cardContainer}>
-          <img src={hautsdefrance} style={{ width: "15rem" }} />
+          <Link to={"/region-hauts-de-france"}>
+            <img src={hautsdefrance} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-hauts-de-france"}>Hauts-de-France</Link>
         </div>
         <div style={styles.cardContainer}>
+          <Link to={"/region-ile-de-france"}></Link>
           <img src={iledefrance} style={{ width: "15rem" }} />
           <Link to={"/region-ile-de-france"}>Ile-de-France</Link>
         </div>
         <div style={styles.cardContainer}>
-          <img src={martinique} style={{ width: "15rem" }} />
+          <Link to={"/region-martinique"}>
+            <img src={martinique} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-martinique"}>Martinique</Link>{" "}
         </div>
         <div style={styles.cardContainer}>
-          <img src={normandie} style={{ width: "15rem" }} />
+          <Link to={"/region-normandie"}>
+            <img src={normandie} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-normandie"}>Normandie</Link>{" "}
         </div>
         <div style={styles.cardContainer}>
-          <img src={nouvelleaquitaine} style={{ width: "15rem" }} />
+          <Link to={"/region-nouvelle-aquitaine"}>
+            <img src={nouvelleaquitaine} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-nouvelle-aquitaine"}>Nouvelle-Aquitaine</Link>
         </div>
 
         <div style={styles.cardContainer}>
-          <img src={occitanie} style={{ width: "15rem" }} />
+          <Link to={"/region-occitanie"}>
+            <img src={occitanie} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-occitanie"}>Occitanie</Link>{" "}
         </div>
 
         <div style={styles.cardContainer}>
-          <img src={paysdelaloire} style={{ width: "15rem" }} />
+          <Link to={"/region-pays-de-loire"}>
+            <img src={paysdelaloire} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-pays-de-loire"}>Pays de Loire</Link>
         </div>
 
         <div style={styles.cardContainer}>
-          <img src={provencealpescotesdazur} style={{ width: "15rem" }} />
+          <Link to={"/region-provence-alpes-cotes-dazur"}>
+            <img src={provencealpescotesdazur} style={{ width: "15rem" }} />
+          </Link>
           <Link to={"/region-provence-alpes-cotes-dazur"}>
             Provence Alpes-Côtes-d'Azur
           </Link>

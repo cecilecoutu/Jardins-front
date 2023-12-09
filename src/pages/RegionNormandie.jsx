@@ -46,6 +46,11 @@ function RegionNormandie(props) {
 const Jardin = ({ jardin }) => (
   <li>
     <h2>{jardin.fields.nom_du_jardin}</h2>
+    <img
+      src={jardin.fields.image_url}
+      style={{ width: "25%" }}
+      alt={jardin.nom_du_jardin}
+    ></img>
     <p>Région: {jardin.fields.region}</p>
     <p>Département: {jardin.fields.departement}</p>
     <p>Année d'obtention du label: {jardin.fields.annee_d_obtention}</p>

@@ -9,12 +9,15 @@ function Navbar(props) {
       width: "100%",
       height: "5rem",
       position: "fixed",
+      paddingTop: "1.5rem",
+      paddingBottom: "1.5rem",
       top: "0",
+      margin: "0 auto",
       display: "flex",
-      justifyContent: "center",
-      alignItems: "space-between",
+      justifyContent: "space-around",
 
-      background: "rgb(30, 79, 36)",
+      backgroundColor: "rgb(30, 79, 36)",
+      backgroundSize: "cover",
     },
   };
 
