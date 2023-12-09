@@ -19,11 +19,22 @@ import Navbar from "./components/Navbar";
 
 import "./App.css";
 
-function App() {
+function App(props) {
+  const styles = {
+    titleContainer: {
+      paddingTop: "5rem",
+    },
+  };
   return (
     <div className="App">
       <Navbar></Navbar>
-      <h1>Projet| Jardins remarquables</h1>
+      <div style={styles.titleContainer}>
+        <h1>Les jardins remarquables de France</h1>
+      </div>
+      <h2>
+        Retrouvez par région les jardins labellisés "Jardins remarquables de
+        France"
+      </h2>
 
       <Routes>
         <Route path="/" element={<HomePage />} />

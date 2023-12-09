@@ -14,74 +14,192 @@ import iledefrance from "../assets/marly2.jpeg";
 import provencealpescotesdazur from "../assets/puymeras.jpeg";
 import occitanie from "../assets/bambous-occitanie.png";
 import { Link } from "react-router-dom/";
+import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 function HomePage(props) {
+  /*const list = [
+    {
+      title: "Auvergne",
+      img: "../assets/jardin_pimprenelle_3.jpg__559x440_q70_crop_subsampling-2_upscale.jpg",
+      Link: "/region-auvergne",
+    },
+
+    {
+      title: "Bourgogne",
+      img: "../assets/courterolle.jpeg",
+      Link: "/region-bourgogne",
+    },
+    {
+      title: "Bretagne",
+      img: "../assets/jardin_rocambole.jpeg",
+      Link: "/region-bretagne",
+    },
+    {
+      title: "Centre",
+      img: "../assets/jardin_de_marie_3.jpeg",
+      Link: "/region-centre-val-de-loire",
+    },
+
+    {
+      title: "Grand-Est",
+      img: "../assets/jardin_du_haut_chitelet.jpeg",
+      Link: "/region-grand-est",
+    },
+    {
+      title: "Hauts-de-France",
+      img: "../assets/jardin_des_ifs.webp",
+      Link: "/region-hauts-de-france",
+    },
+    {
+      title: "Ile-de-France",
+      img: "../assets/marly2.jpeg",
+      Link: "/region-ile-de-france",
+    },
+    {
+      title: "Martinique",
+      img: "../assets/domaine-émeraude-jardins-martinique.jpeg",
+      Link: "/region-martinique",
+    },
+
+    {
+      title: "Normandie",
+      img: "../assets/Jardin-du-Crapaud-a-Trois-Pattes--SMA--HAREL--6-.jpeg",
+      Link: "/region-normandie",
+    },
+
+    {
+      title: "Nouvelle-Aquitaine",
+      img: "../assets/les-bambous-de-planbuisson6.jpeg",
+      Link: "/region-nouvelle-aquitaine",
+    },
+
+    {
+      title: "Occitanie",
+      img: "../assets/bambous-occitanie.png",
+      Link: "/region-occitanie",
+    },
+
+    {
+      title: "Pays-de-la-loire",
+      img: "../assets/les-jardins-du-marais-herbignac-1143144-3e9301e94429496a8960663847fd0d45.jpeg",
+      Link: "/region-pays-de-loire",
+    },
+
+    {
+      title: "Provence-Alpes-Côte-d'Azur",
+      img: "../assets/puymeras.jpeg",
+      Link: "/region-provence-alpes-cotes-dazur",
+    },
+  ];*/
+
   const styles = {
-    styleContainer: {
-      width: "50%",
+    placesContainer: {
       display: "flex",
-      flexDirection: "column",
+      flexDirection: "row",
+      flexWrap: "wrap",
+      justifyContent: "center",
+    },
+
+    cardContainer: {
+      width: "20%",
+      border: "1px solid rgb(193, 202, 211)",
+      margin: "1rem",
+      padding: "1rem",
+      boxShadow: "10px 5px 5px green",
+      boxSizing: "content-box",
+      borderRadius: "1rem",
     },
   };
 
+  /*return (
+    <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
+      {list.map((item, index) => (
+        <Card
+          shadow="sm"
+          key={index}
+          isPressable
+          onPress={() => console.log("item pressed")}
+        >
+          <CardBody className="overflow-visible p-0">
+            <Image
+              shadow="sm"
+              radius="lg"
+              width="100%"
+              alt={item.title}
+              className="w-full object-cover h-[140px]"
+              src={item.img}
+            />
+          </CardBody>
+          <CardFooter className="text-small justify-between">
+            <b>{item.title}</b>
+            <p className="text-default-500">{item.price}</p>
+          </CardFooter>
+        </Card>
+      ))}
+    </div>
+  );
+}*/
   return (
     <div>
-      <div>
-        <img src={auvergnerhonealpes} />
-        <Link to={"/region-auvergne"}>Auvergne</Link>
-      </div>
-      <div>
-        <img src={bretagne} />
-        <Link to={"/region-bretagne"}>Bretagne</Link>
-      </div>
-      <div>
-        <img src={centre} />
-        <Link to={"/region-centre-val-de-loire"}>Centre Val de Loire</Link>
-      </div>
-      <div>
-        <img src={grandest} />
-        <Link to={"/region-grand-est"}>Grand-Est</Link>
-      </div>
-      <div>
-        <img src={hautsdefrance} />
-        <Link to={"/region-hauts-de-france"}>Hauts-de-France</Link>
-      </div>
-      <div>
-        <img src={iledefrance} />
-        <Link to={"/region-ile-de-france"}>Ile-de-France</Link>
-      </div>
-      <div>
-        <img src={martinique} />
-        <Link to={"/region-martinique"}>Martinique</Link>{" "}
-      </div>
-      <div>
-        <img src={normandie} />
-        <Link to={"/region-normandie"}>Normandie</Link>{" "}
-      </div>
-      <div>
-        <img src={nouvelleaquitaine} />
-        <Link to={"/region-nouvelle-aquitaine"}>Nouvelle-Aquitaine</Link>
-      </div>
+      <div style={styles.placesContainer}>
+        <div style={styles.cardContainer}>
+          <img src={auvergnerhonealpes} style={{ width: "15rem" }} />
+          <Link to={"/region-auvergne"}>Auvergne</Link>
+        </div>
 
-      <div>
-        <img src={occitanie} />
-        <Link to={"/region-occitanie"}>Occitanie</Link>{" "}
-      </div>
+        <div style={styles.cardContainer}>
+          <img src={bourgogne} style={{ width: "15rem" }} />
+          <Link to={"/region-bourgogne"}>Bourgogne</Link>
+        </div>
+        <div style={styles.cardContainer}>
+          <img src={bretagne} style={{ width: "15rem" }} />
+          <Link to={"/region-bretagne"}>Bretagne</Link>
+        </div>
+        <div style={styles.cardContainer}>
+          <img src={centre} style={{ width: "15rem" }} />
+          <Link to={"/region-centre-val-de-loire"}>Centre Val de Loire</Link>
+        </div>
+        <div style={styles.cardContainer}>
+          <img src={grandest} style={{ width: "15rem" }} />
+          <Link to={"/region-grand-est"}>Grand-Est</Link>
+        </div>
+        <div style={styles.cardContainer}>
+          <img src={hautsdefrance} style={{ width: "15rem" }} />
+          <Link to={"/region-hauts-de-france"}>Hauts-de-France</Link>
+        </div>
+        <div style={styles.cardContainer}>
+          <img src={iledefrance} style={{ width: "15rem" }} />
+          <Link to={"/region-ile-de-france"}>Ile-de-France</Link>
+        </div>
+        <div style={styles.cardContainer}>
+          <img src={martinique} style={{ width: "15rem" }} />
+          <Link to={"/region-martinique"}>Martinique</Link>{" "}
+        </div>
+        <div style={styles.cardContainer}>
+          <img src={normandie} style={{ width: "15rem" }} />
+          <Link to={"/region-normandie"}>Normandie</Link>{" "}
+        </div>
+        <div style={styles.cardContainer}>
+          <img src={nouvelleaquitaine} style={{ width: "15rem" }} />
+          <Link to={"/region-nouvelle-aquitaine"}>Nouvelle-Aquitaine</Link>
+        </div>
 
-      <div>
-        <img src={paysdelaloire} />
-        <Link to={"/region-pays-de-loire"}>Pays de Loire</Link>
-      </div>
+        <div style={styles.cardContainer}>
+          <img src={occitanie} style={{ width: "15rem" }} />
+          <Link to={"/region-occitanie"}>Occitanie</Link>{" "}
+        </div>
 
-      <div>
-        <img src={provencealpescotesdazur} />
-        <Link to={"/region-provence-alpes-cotes-dazur"}>
-          Provence Alpes-Côtes-d'Azur
-        </Link>
-      </div>
-      <div>
-        <img src={bourgogne} />
-        <Link to={"/region-bourgogne"}>Bourgogne</Link>
+        <div style={styles.cardContainer}>
+          <img src={paysdelaloire} style={{ width: "15rem" }} />
+          <Link to={"/region-pays-de-loire"}>Pays de Loire</Link>
+        </div>
+
+        <div style={styles.cardContainer}>
+          <img src={provencealpescotesdazur} style={{ width: "15rem" }} />
+          <Link to={"/region-provence-alpes-cotes-dazur"}>
+            Provence Alpes-Côtes-d'Azur
+          </Link>
+        </div>
       </div>
     </div>
   );
