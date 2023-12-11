@@ -35,7 +35,7 @@ function RegionOccitanie(props) {
       <h1>Les jardins remarquables en région Occitanie</h1>
       <ul>
         {jardinsOccitanie.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>

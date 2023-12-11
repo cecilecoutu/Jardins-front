@@ -41,9 +41,7 @@ function RandomGarden(props) {
         vacances !
       </h2>
 
-      {randomGarden && (
-        <Jardin key={randomGarden.recordid} jardin={randomGarden} />
-      )}
+      {randomGarden && <Jardin key={randomGarden.id} jardin={randomGarden} />}
     </div>
   );
 }

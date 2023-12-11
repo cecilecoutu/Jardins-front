@@ -38,7 +38,7 @@ function RegionProvenceAlpesCotesDazur(props) {
       <h1>Les jardins remarquales en région Provence-Alpes-Côte d'Azur</h1>
       <ul>
         {jardinsProvenceAlpesCotesDazur.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>

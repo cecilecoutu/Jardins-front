@@ -36,7 +36,7 @@ function RegionNouvelleAquitaine(props) {
       <h1>Les jardins remarquables en région Nouvelle-Aquitaine</h1>
       <ul>
         {jardinsNouvelleAquitaine.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>

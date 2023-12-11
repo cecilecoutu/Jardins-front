@@ -35,7 +35,7 @@ function RegionHautsdeFrance(props) {
       <h1>Les jardins remarquales en région Hauts-de-France</h1>
       <ul>
         {jardinsHautsDeFrance.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>

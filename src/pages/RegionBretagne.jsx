@@ -36,7 +36,7 @@ function RegionBretagne(props) {
       <h1>Les jardins remarquales en région Bretagne</h1>
       <ul>
         {jardinsBretagne.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>

@@ -36,7 +36,7 @@ function RegionCentreValdeLoire(props) {
       <h1>Les jardins remarquales en région Centre Val de Loire</h1>
       <ul>
         {jardinsCentreValdeLoire.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>

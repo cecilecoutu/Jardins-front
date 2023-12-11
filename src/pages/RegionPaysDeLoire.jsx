@@ -36,7 +36,7 @@ function RegionPaysDeLoire(props) {
       <h1>Les jardins remarquales en région Pays de Loire</h1>
       <ul>
         {jardinsPaysDeLoire.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>

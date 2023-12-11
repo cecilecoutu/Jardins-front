@@ -35,7 +35,7 @@ function RegionBourgogne(props) {
       <h1>Les jardins remarquales en région Bourgogne Franche-Comté</h1>
       <ul>
         {jardinsBourgogne.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>

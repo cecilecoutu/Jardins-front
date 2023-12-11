@@ -16,9 +16,9 @@ function AddGarden(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-
+    console.log(formData);
     axios
-      .post(`${API_URL}/nouveau-jardin`, formData)
+      .post(`${API_URL}`, formData)
       .then((res) => {
         console.log("garden added successfully!");
         navigate("/nouveau-jardin");
@@ -35,12 +35,12 @@ function AddGarden(props) {
     <div>
       <h2>Proposer un jardin à labelliser</h2>
       <form onSubmit={handleSubmit}>
-        <label style={{ width: "100%" }}>
+        <label style={{ marginRight: "50px", width: "100%" }}>
           Nom:
           <input
             type="text"
-            name="name"
-            value={formData.fields.nom_du_jardin}
+            name="nom_du_jardin"
+            value={formData.nom_du_jardin}
             onChange={handleChange}
           />
         </label>
@@ -50,7 +50,7 @@ function AddGarden(props) {
           <input
             type="text"
             name="region"
-            value={formData.fields.region}
+            value={formData.region}
             onChange={handleChange}
           />
         </label>
@@ -61,25 +61,27 @@ function AddGarden(props) {
           <input
             type="text"
             name="departement"
-            value={formData.fields.departement}
+            value={formData.departement}
             onChange={handleChange}
           />
         </label>
-        <label>
+        <label style={{ marginRight: "50px", width: "100%" }}>
           Description:
           <textarea
             name="description"
-            value={formData.fields.description}
+            value={formData.description}
             onChange={handleChange}
           />
         </label>
         <br></br>
-        <label>
+        <label
+          style={{ marginTop: "2rem", marginRight: "50px", width: "100%" }}
+        >
           Type de jardin:
           <input
             type="text"
             name="types"
-            value={formData.field.types}
+            value={formData.types}
             onChange={handleChange}
           />
         </label>

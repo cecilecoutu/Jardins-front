@@ -36,7 +36,7 @@ function RegionGrandEst(props) {
       <h1>Les jardins remarquales en région Grand Est</h1>
       <ul>
         {jardinsGrandEst.map((jardin) => (
-          <Jardin key={jardin.recordid} jardin={jardin} />
+          <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
     </div>
