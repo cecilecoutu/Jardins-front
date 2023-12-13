@@ -154,7 +154,7 @@ function HomePage(props) {
       <div style={styles.placesContainer}>
         <div style={styles.cardContainer}>
           <Link to={"/region-auvergne"}>
-            <img src={auvergnerhonealpes} style={{ width: "15rem" }} />
+            <img src={auvergnerhonealpes} style={styles.cardImage} />
           </Link>
 
           <Link to={"/region-auvergne"} style={{ color: "black" }}>
@@ -164,7 +164,7 @@ function HomePage(props) {
 
         <div style={styles.cardContainer}>
           <Link to={"/region-bourgogne"}>
-            <img src={bourgogne} style={{ width: "15rem" }} />
+            <img src={bourgogne} style={styles.cardImage} />
           </Link>
           <Link to={"/region-bourgogne"} style={{ color: "black" }}>
             Bourgogne
@@ -172,7 +172,7 @@ function HomePage(props) {
         </div>
         <div style={styles.cardContainer}>
           <Link to={"/region-bretagne"}>
-            <img src={bretagne} style={{ width: "15rem" }} />
+            <img src={bretagne} style={styles.cardImage} />
           </Link>
           <Link to={"/region-bretagne"} style={{ color: "black" }}>
             Bretagne
@@ -180,7 +180,7 @@ function HomePage(props) {
         </div>
         <div style={styles.cardContainer}>
           <Link to={"/region-centre-val-de-loire"}>
-            <img src={centre} style={{ width: "15rem" }} />
+            <img src={centre} style={styles.cardImage} />
           </Link>
           <Link to={"/region-centre-val-de-loire"} style={{ color: "black" }}>
             Centre Val de Loire
@@ -188,7 +188,7 @@ function HomePage(props) {
         </div>
         <div style={styles.cardContainer}>
           <Link to={"/region-grand-est"}>
-            <img src={grandest} style={{ width: "15rem" }} />
+            <img src={grandest} style={styles.cardImage} />
           </Link>
           <Link to={"/region-grand-est"} style={{ color: "black" }}>
             Grand-Est
@@ -196,7 +196,7 @@ function HomePage(props) {
         </div>
         <div style={styles.cardContainer}>
           <Link to={"/region-hauts-de-france"}>
-            <img src={hautsdefrance} style={{ width: "15rem" }} />
+            <img src={hautsdefrance} style={styles.cardImage} />
           </Link>
           <Link to={"/region-hauts-de-france"} style={{ color: "black" }}>
             Hauts-de-France
@@ -204,14 +204,14 @@ function HomePage(props) {
         </div>
         <div style={styles.cardContainer}>
           <Link to={"/region-ile-de-france"}></Link>
-          <img src={iledefrance} style={{ width: "15rem" }} />
+          <img src={iledefrance} style={styles.cardImage} />
           <Link to={"/region-ile-de-france"} style={{ color: "black" }}>
             Ile-de-France
           </Link>
         </div>
         <div style={styles.cardContainer}>
           <Link to={"/region-martinique"}>
-            <img src={martinique} style={{ width: "15rem" }} />
+            <img src={martinique} style={styles.cardImage} />
           </Link>
           <Link to={"/region-martinique"} style={{ color: "black" }}>
             Martinique
@@ -219,7 +219,7 @@ function HomePage(props) {
         </div>
         <div style={styles.cardContainer}>
           <Link to={"/region-normandie"}>
-            <img src={normandie} style={{ width: "15rem" }} />
+            <img src={normandie} style={styles.cardImage} />
           </Link>
           <Link to={"/region-normandie"} style={{ color: "black" }}>
             Normandie
@@ -227,7 +227,7 @@ function HomePage(props) {
         </div>
         <div style={styles.cardContainer}>
           <Link to={"/region-nouvelle-aquitaine"}>
-            <img src={nouvelleaquitaine} style={{ width: "15rem" }} />
+            <img src={nouvelleaquitaine} style={styles.cardImage} />
           </Link>
           <Link to={"/region-nouvelle-aquitaine"} style={{ color: "black" }}>
             Nouvelle-Aquitaine
@@ -236,7 +236,7 @@ function HomePage(props) {
 
         <div style={styles.cardContainer}>
           <Link to={"/region-occitanie"}>
-            <img src={occitanie} style={{ width: "15rem" }} />
+            <img src={occitanie} style={styles.cardImage} />
           </Link>
           <Link to={"/region-occitanie"} style={{ color: "black" }}>
             Occitanie
@@ -245,7 +245,7 @@ function HomePage(props) {
 
         <div style={styles.cardContainer}>
           <Link to={"/region-pays-de-loire"}>
-            <img src={paysdelaloire} style={{ width: "15rem" }} />
+            <img src={paysdelaloire} style={styles.cardImage} />
           </Link>
           <Link to={"/region-pays-de-loire"} style={{ color: "black" }}>
             Pays de Loire
@@ -254,7 +254,7 @@ function HomePage(props) {
 
         <div style={styles.cardContainer}>
           <Link to={"/region-provence-alpes-cotes-dazur"}>
-            <img src={provencealpescotesdazur} style={{ width: "15rem" }} />
+            <img src={provencealpescotesdazur} style={styles.cardImage} />
           </Link>
           <Link
             to={"/region-provence-alpes-cotes-dazur"}
