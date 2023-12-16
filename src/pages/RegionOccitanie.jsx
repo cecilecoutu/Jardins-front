@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function RegionOccitanie(props) {
   const API_URL =
-    "https://les-jardins-remarquables-de-france.vercel.app/jardins";
+    "https://les-jardins-remarquables-de-france-ccilnins-projects.vercel.app/jardins";
 
   const [jardins, setJardins] = useState([]);
   const [regionFiltre, setRegionFiltre] = useState("Normandie");
@@ -83,7 +83,7 @@ const styles = {
   textResponsive: {
     fontSize: "16px", // Taille de base pour les écrans plus larges
 
-    "@media (max-width: 768px)": {
+    "@media (maxWidth: 768px)": {
       fontSize: "14px", // Taille pour les écrans plus petits que 768px
     },
   },

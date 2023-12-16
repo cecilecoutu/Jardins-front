@@ -5,36 +5,41 @@ import { Link } from "react-router-dom";
 
 function RegionAuvergneRhoneAlpes(props) {
   const API_URL =
-    "https://les-jardins-remarquables-de-france.vercel.app/jardins";
+    "https://les-jardins-remarquables-de-france-ccilnins-projects.vercel.app/jardins";
 
-  const [jardins, setJardins] = useState([]);
-  const [regionFiltre, setRegionFiltre] = useState("Auvergne-Rhône-Alpes");
+  const [jardins, setJardins] = useState();
 
   useEffect(() => {
     axios
-      .get(`${API_URL}?region=${regionFiltre}`)
+      .get(`${API_URL}`)
       .then((res) => {
-        console.log(res.data);
-        setJardins(res.data);
+        const Result = res.data;
+
+        const resultfilter = Result.filter(
+          (jardin) => jardin.fields?.region === "Auvergne-Rhône-Alpes"
+        );
+        console.log(resultfilter);
+
+        setJardins(resultfilter);
       })
 
       .catch((e) => console.log(e));
-  }, [regionFiltre]);
+  }, []);
 
   if (!jardins) {
     return <div>Loading...</div>;
   }
 
   // Filtrer les jardins de la région Auvergne
-  const jardinsAuvergne = jardins.filter(
-    (jardin) => jardin.fields.region === "Auvergne-Rhône-Alpes"
-  );
+  // const jardinsAuvergne = jardins.filter(
+  //   (jardin) => jardin.fields.region === "Auvergne-Rhône-Alpes"
+  // );
 
   return (
     <div>
       <h1>Les jardins remarquales en région Auvergne Rhône-Alpes</h1>
       <ul>
-        {jardinsAuvergne.map((jardin) => (
+        {jardins.map((jardin) => (
           <Jardin key={jardin.id} jardin={jardin} />
         ))}
       </ul>
@@ -83,7 +88,7 @@ const styles = {
   textResponsive: {
     fontSize: "16px", // Taille de base pour les écrans plus larges
 
-    "@media (max-width: 768px)": {
+    "@media (maxWidth: 768px)": {
       fontSize: "14px", // Taille pour les écrans plus petits que 768px
     },
   },
@@ -113,9 +118,7 @@ const Jardin = ({ jardin }) => (
             <p>Type de jardin: {jardin.fields.types}</p>
             <p>Description: {jardin.fields.description}</p>
 
-            <Link to={`${jardin.fields.site_internet_et_autres_liens}`}>
-              Pour en savoir plus
-            </Link>
+            <Link to={`/jardins/${jardin.id}`}>Details</Link>
           </div>
         </div>
       </div>

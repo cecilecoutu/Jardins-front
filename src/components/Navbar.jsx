@@ -8,10 +8,10 @@ function Navbar(props) {
   const styles = {
     navContainer: {
       width: "100%",
-      height: "5rem",
+      height: "2.5rem",
       position: "fixed",
-      paddingTop: "1.5rem",
-      paddingBottom: "1.5rem",
+      paddingTop: "1rem",
+      paddingBottom: "1.2rem",
       top: "0",
       margin: "0 auto",
       display: "flex",
@@ -25,22 +25,26 @@ function Navbar(props) {
   return (
     <nav style={styles.navContainer}>
       <Link to={"/"}>
-        <img src={Home} alt="home" style={{ width: "4rem" }} />
+        <img src={Home} alt="home" style={{ width: "1.5rem" }} />
         <br></br>
-        <div style={{ color: "white" }}>Home</div>
+        <div style={{ color: "white", fontSize: "0.9rem" }}>Home</div>
       </Link>
       <Link to={"/inspiration-du-jour"}>
-        <img src={Inspiration} alt="inspiration" style={{ width: "4rem" }} />
+        <img src={Inspiration} alt="inspiration" style={{ width: "1.5rem" }} />
         <br></br>
-        <div style={{ color: "white" }}>Inspiration du jour</div>
+        <div style={{ color: "white", fontSize: "0.9rem" }}>
+          Inspiration du jour
+        </div>
       </Link>
       <Link to={"/nouveau-jardin"}>
         <img
           src={NewGarden}
           alt="nouveau jardin à labelliser"
-          style={{ width: "4rem" }}
+          style={{ width: "1.5rem" }}
         />
-        <div style={{ color: "white" }}>Labelliser un nouveau jardin</div>
+        <div style={{ color: "white", fontSize: "0.9rem" }}>
+          Labelliser un nouveau jardin
+        </div>
       </Link>
     </nav>
   );

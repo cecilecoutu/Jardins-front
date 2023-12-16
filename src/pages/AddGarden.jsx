@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 function AddGarden(props) {
   const API_URL =
-    "https://les-jardins-remarquables-de-france.vercel.app/jardins";
+    "https://les-jardins-remarquables-de-france-ccilnins-projects.vercel.app/jardins";
   const [formData, setFormData] = useState({
     nom_du_jardin: "",
     region: "",

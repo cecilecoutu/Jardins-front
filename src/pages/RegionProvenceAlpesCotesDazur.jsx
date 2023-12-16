@@ -86,7 +86,7 @@ const styles = {
   textResponsive: {
     fontSize: "16px", // Taille de base pour les écrans plus larges
 
-    "@media (max-width: 768px)": {
+    "@media (maxWidth: 768px)": {
       fontSize: "14px", // Taille pour les écrans plus petits que 768px
     },
   },
