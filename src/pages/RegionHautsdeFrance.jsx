@@ -7,20 +7,24 @@ function RegionHautsdeFrance(props) {
   const API_URL =
     "https://les-jardins-remarquables-de-france-ccilnins-projects.vercel.app/jardins";
 
-  const [jardins, setJardins] = useState([]);
-  const [regionFiltre, setRegionFiltre] = useState("Hauts-de-France");
+  const [jardins, setJardins] = useState();
 
   useEffect(() => {
     axios
-      .get(`${API_URL}?region=${regionFiltre}`)
+      .get(`${API_URL}`)
       .then((res) => {
-        console.log(res.data);
+        const Result = res.data;
 
-        setJardins(res.data);
+        const resultfilter = Result.filter(
+          (jardin) => jardin.fields?.region === "Hauts-de-France"
+        );
+        console.log(resultfilter);
+
+        setJardins(resultfilter);
       })
 
       .catch((e) => console.log(e));
-  }, [regionFiltre]);
+  }, []);
 
   if (!jardins) {
     return <div>Loading...</div>;

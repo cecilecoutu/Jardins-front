@@ -7,22 +7,24 @@ function RegionProvenceAlpesCotesDazur(props) {
   const API_URL =
     "https://les-jardins-remarquables-de-france-ccilnins-projects.vercel.app/jardins";
 
-  const [jardins, setJardins] = useState([]);
-
-  const [regionFiltre, setRegionFiltre] = useState(
-    "Provence-Alpes-Côte d'Azur"
-  );
+  const [jardins, setJardins] = useState();
 
   useEffect(() => {
     axios
-      .get(`${API_URL}?region=${regionFiltre}`)
+      .get(`${API_URL}`)
       .then((res) => {
-        console.log(res.data);
-        setJardins(res.data);
+        const Result = res.data;
+
+        const resultfilter = Result.filter(
+          (jardin) => jardin.fields?.region === "Provence-Alpes-Côte d'Azur"
+        );
+        console.log(resultfilter);
+
+        setJardins(resultfilter);
       })
 
       .catch((e) => console.log(e));
-  }, [regionFiltre]);
+  }, []);
 
   if (!jardins) {
     return <div>Loading...</div>;

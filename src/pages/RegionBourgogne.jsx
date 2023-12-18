@@ -7,19 +7,24 @@ function RegionBourgogne(props) {
   const API_URL =
     "https://les-jardins-remarquables-de-france-ccilnins-projects.vercel.app/jardins";
 
-  const [jardins, setJardins] = useState([]);
-  const [regionFiltre, setRegionFiltre] = useState("Bourgogne");
+  const [jardins, setJardins] = useState();
 
   useEffect(() => {
     axios
-      .get(`${API_URL}?region=${regionFiltre}`)
+      .get(`${API_URL}`)
       .then((res) => {
-        console.log(res.data);
-        setJardins(res.data);
+        const Result = res.data;
+
+        const resultfilter = Result.filter(
+          (jardin) => jardin.fields?.region === "Bourgogne-Franche-Comté"
+        );
+        console.log(resultfilter);
+
+        setJardins(resultfilter);
       })
 
       .catch((e) => console.log(e));
-  }, [regionFiltre]);
+  }, []);
 
   if (!jardins) {
     return <div>Loading...</div>;
@@ -32,7 +37,7 @@ function RegionBourgogne(props) {
 
   return (
     <div style={styles.titleContainer}>
-      <h1>Les jardins remarquales en région Bourgogne Franche-Comté</h1>
+      <h1>Les jardins remarquables en région Bourgogne Franche-Comté</h1>
       <ul>
         {jardinsBourgogne.map((jardin) => (
           <Jardin key={jardin.id} jardin={jardin} />
