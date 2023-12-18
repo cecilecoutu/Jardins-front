@@ -23,21 +23,9 @@ import "./App.css";
 import "./index.css";
 
 function App(props) {
-  const styles = {
-    titleContainer: {
-      paddingTop: "8rem",
-    },
-  };
   return (
     <div className="App">
       <Navbar></Navbar>
-      <div style={styles.titleContainer}>
-        <h1>Les jardins remarquables de France</h1>
-      </div>
-      <h3>
-        Retrouvez par région les jardins labellisés "Jardins remarquables de
-        France"
-      </h3>
 
       <Routes>
         <Route path="/" element={<HomePage />} />

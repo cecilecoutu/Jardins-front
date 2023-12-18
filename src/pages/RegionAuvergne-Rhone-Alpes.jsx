@@ -36,8 +36,8 @@ function RegionAuvergneRhoneAlpes(props) {
   // );
 
   return (
-    <div>
-      <h1>Les jardins remarquales en région Auvergne Rhône-Alpes</h1>
+    <div style={styles.titleContainer}>
+      <h1>Les jardins remarquables en région Auvergne Rhône-Alpes</h1>
       <ul>
         {jardins.map((jardin) => (
           <Jardin key={jardin.id} jardin={jardin} />
@@ -48,6 +48,11 @@ function RegionAuvergneRhoneAlpes(props) {
 }
 
 const styles = {
+  titleContainer: {
+    paddingTop: "8rem",
+    width: "90%",
+  },
+
   listContainer: {
     display: "flex",
     flexDirection: "row",
@@ -55,7 +60,7 @@ const styles = {
   },
 
   borderContainer: {
-    width: "40%",
+    width: "35%",
     margin: "1rem",
     marginBottom: "2rem",
     padding: "1rem",
@@ -116,9 +121,7 @@ const Jardin = ({ jardin }) => (
             <p>Adresse complète: {jardin.fields.adresse_complete}</p>
             <p>Année d'obtention du label: {jardin.fields.annee_d_obtention}</p>
             <p>Type de jardin: {jardin.fields.types}</p>
-            <p>Description: {jardin.fields.description}</p>
-
-            <Link to={`/jardins/${jardin.id}`}>Details</Link>
+            <Link to={`/jardins/${jardin.id}`}>Détails</Link>
           </div>
         </div>
       </div>

@@ -31,7 +31,7 @@ function RegionOccitanie(props) {
   );
 
   return (
-    <div>
+    <div style={styles.titleContainer}>
       <h1>Les jardins remarquables en région Occitanie</h1>
       <ul>
         {jardinsOccitanie.map((jardin) => (
@@ -43,6 +43,11 @@ function RegionOccitanie(props) {
 }
 
 const styles = {
+  titleContainer: {
+    paddingTop: "8rem",
+    width: "90%",
+  },
+
   listContainer: {
     display: "flex",
     flexDirection: "row",
@@ -111,11 +116,8 @@ const Jardin = ({ jardin }) => (
             <p>Adresse complète: {jardin.fields.adresse_complete}</p>
             <p>Année d'obtention du label: {jardin.fields.annee_d_obtention}</p>
             <p>Type de jardin: {jardin.fields.types}</p>
-            <p>Description: {jardin.fields.description}</p>
 
-            <Link to={`${jardin.fields.site_internet_et_autres_liens}`}>
-              Pour en savoir plus
-            </Link>
+            <Link to={`/jardins/${jardin.id}`}>Détails</Link>
           </div>
         </div>
       </div>

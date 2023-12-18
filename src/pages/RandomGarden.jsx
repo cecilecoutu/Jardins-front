@@ -36,10 +36,12 @@ function RandomGarden(props) {
 
   return (
     <div>
-      <h2>
-        Inspiration du jour : découvrez une suggestion pour vos prochaines
-        vacances !
-      </h2>
+      <div style={styles.titleContainer}>
+        <h3>
+          Inspiration du jour : découvrez une suggestion pour vos prochaines
+          vacances !
+        </h3>
+      </div>
 
       {randomGarden && <Jardin key={randomGarden.id} jardin={randomGarden} />}
     </div>
@@ -47,6 +49,11 @@ function RandomGarden(props) {
 }
 
 const styles = {
+  titleContainer: {
+    paddingTop: "8rem",
+    width: "90%",
+  },
+
   listContainer: {
     display: "flex",
     flexDirection: "row",

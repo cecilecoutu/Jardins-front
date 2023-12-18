@@ -14,21 +14,25 @@ function AddGarden(props) {
   });
   const navigate = useNavigate();
 
-  function handleSubmit(event) {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
     axios
-      .post(`${API_URL}`, formData)
+      .post(`${API_URL}`, formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((res) => {
         console.log("garden added successfully!");
         navigate("/nouveau-jardin");
       })
       .catch((e) => console.log(e));
-  }
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
   };
 
   return (

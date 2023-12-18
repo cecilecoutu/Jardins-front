@@ -100,6 +100,10 @@ function HomePage(props) {
       justifyContent: "center",
     },
 
+    titleContainer: {
+      paddingTop: "8rem",
+    },
+
     cardContainer: {
       width: "18%",
       border: "1px solid rgb(193, 202, 211)",
@@ -151,6 +155,13 @@ function HomePage(props) {
 }*/
   return (
     <div>
+      <div style={styles.titleContainer}>
+        <h1>Les jardins remarquables de France</h1>
+      </div>
+      <h3>
+        Retrouvez par région les jardins labellisés "Jardins remarquables de
+        France"
+      </h3>
       <div style={styles.placesContainer}>
         <div style={styles.cardContainer}>
           <Link to={"/region-auvergne"}>

@@ -10,6 +10,10 @@ function GardenDetails() {
 
   const [gardenDetails, setGardenDetails] = useState();
   const styles = {
+    titleContainer: {
+      paddingTop: "8rem",
+    },
+
     listContainer: {
       display: "flex",
       flexDirection: "row",
@@ -77,21 +81,67 @@ function GardenDetails() {
     return <p>Loading...</p>;
   }
 
+  const Jardin = ({ jardin }) => (
+    <div>
+      <div style={styles.listContainer}>
+        <div style={styles.borderContainer}>
+          <div style={styles.cardImage}>
+            <img
+              src={jardin.fields.image_url}
+              alt={jardin.nom_du_jardin}
+              style={styles.cardImage}
+            ></img>
+          </div>
+        </div>
+        <div style={styles.secondBorderContainer}>
+          <div style={styles.textContainer}>
+            <div style={styles.textResponsive}>
+              <h2>{jardin.fields.nom_du_jardin}</h2>
+              <p>Région: {jardin.fields.region}</p>
+              <p>Département: {jardin.fields.departement}</p>
+              <p>Adresse complète: {jardin.fields.adresse_complete}</p>
+              <p>
+                Année d'obtention du label: {jardin.fields.annee_d_obtention}
+              </p>
+              <p>Type de jardin: {jardin.fields.types}</p>
+
+              <Link to={`/jardins/${jardin.id}`}>Détails</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div>
-      <h2> {gardenId}</h2>
-      <div>{gardenDetails.fields.nom_du_jardin}</div>
-      <img
-        src={gardenDetails.fields.image_url}
-        alt={gardenDetails.fields.nom_du_jardin}
-      />
-      <p>Description: {gardenDetails.fields.description}</p>
+      <div style={styles.listContainer}>
+        <div style={styles.borderContainer}>
+          <div style={styles.cardImage}></div>
 
-      <p>Adresse complète: {gardenDetails.fields.adresse_complete}</p>
-      <p>
-        Adresse de l'entrée au public:
-        {gardenDetails.fields.adresse_de_l_entree_du_public}
-      </p>
+          <img
+            src={gardenDetails.fields.image_url}
+            alt={gardenDetails.fields.nom_du_jardin}
+            style={styles.cardImage}
+          />
+        </div>
+
+        <div style={styles.secondBorderContainer}>
+          <div style={styles.textContainer}>
+            <div style={styles.textResponsive}></div>
+
+            <h2>{gardenDetails.fields.nom_du_jardin}</h2>
+            <p>Commune: {gardenDetails.fields.commune}</p>
+            <p>Description: {gardenDetails.fields.description}</p>
+
+            <p>Adresse complète: {gardenDetails.fields.adresse_complete}</p>
+            <p>
+              Adresse de l'entrée au public:{" "}
+              {gardenDetails.fields.adresse_de_l_entree_du_public}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
