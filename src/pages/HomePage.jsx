@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import AddGarden from "../pages/AddGarden";
 import React from "react";
 import bourgogne from "../assets/courterolle.jpeg";
 import martinique from "../assets/domaine-émeraude-jardins-martinique.jpeg";
