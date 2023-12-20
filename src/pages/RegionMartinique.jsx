@@ -45,7 +45,6 @@ function RegionMartinique(props) {
     </div>
   );
 }
-
 const styles = {
   loading: {
     margin: "6rem",
@@ -65,7 +64,7 @@ const styles = {
   },
 
   borderContainer: {
-    width: "40%",
+    width: "35%",
     margin: "1rem",
     marginBottom: "2rem",
     padding: "1rem",

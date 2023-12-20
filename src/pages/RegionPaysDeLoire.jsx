@@ -53,6 +53,7 @@ const styles = {
     fontSize: "1.5rem",
     color: "rgb(84, 138, 91)",
   },
+
   titleContainer: {
     paddingTop: "8rem",
     width: "90%",
@@ -65,7 +66,7 @@ const styles = {
   },
 
   borderContainer: {
-    width: "40%",
+    width: "35%",
     margin: "1rem",
     marginBottom: "2rem",
     padding: "1rem",
