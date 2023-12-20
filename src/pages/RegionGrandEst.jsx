@@ -26,7 +26,7 @@ function RegionGrandEst(props) {
   }, []);
 
   if (!jardins) {
-    return <div>Loading...</div>;
+    return <div style={styles.loading}>Loading...</div>;
   }
 
   // Filtrer les jardins de la région Grand Est
@@ -36,7 +36,7 @@ function RegionGrandEst(props) {
 
   return (
     <div style={styles.titleContainer}>
-      <h1>Les jardins remarquales en région Grand Est</h1>
+      <h1>Les jardins remarquables en région Grand Est</h1>
       <ul>
         {jardinsGrandEst.map((jardin) => (
           <Jardin key={jardin.id} jardin={jardin} />
@@ -47,6 +47,12 @@ function RegionGrandEst(props) {
 }
 
 const styles = {
+  loading: {
+    margin: "6rem",
+    fontSize: "1.5rem",
+    color: "rgb(84, 138, 91)",
+  },
+
   titleContainer: {
     paddingTop: "8rem",
     width: "90%",

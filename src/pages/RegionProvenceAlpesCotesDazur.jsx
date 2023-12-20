@@ -27,7 +27,7 @@ function RegionProvenceAlpesCotesDazur(props) {
   }, []);
 
   if (!jardins) {
-    return <div>Loading...</div>;
+    return <div style={styles.loading}>Loading...</div>;
   }
 
   // Filtrer les jardins de la région Provence-Alpes-Côte d'Azur
@@ -48,6 +48,12 @@ function RegionProvenceAlpesCotesDazur(props) {
 }
 
 const styles = {
+  loading: {
+    margin: "6rem",
+    fontSize: "1.5rem",
+    color: "rgb(84, 138, 91)",
+  },
+
   titleContainer: {
     paddingTop: "8rem",
     width: "90%",

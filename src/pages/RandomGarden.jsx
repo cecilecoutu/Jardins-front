@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import GardenImage from "../assets/tree-decidious-svgrepo-com (1).svg";
 
 function RandomGarden(props) {
   const API_URL =
@@ -31,11 +32,15 @@ function RandomGarden(props) {
   }, [gardens]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div style={styles.loading}>Loading...</div>;
   }
 
   return (
     <div>
+      <div>
+        <img src={GardenImage} style={styles.Tree} alt="Garden" />
+      </div>
+
       <div style={styles.titleContainer}>
         <h3>
           Inspiration du jour : découvrez une suggestion pour vos prochaines
@@ -49,8 +54,20 @@ function RandomGarden(props) {
 }
 
 const styles = {
+  Tree: {
+    paddingTop: "6rem",
+    justifyContent: "center",
+    width: "5rem",
+  },
+
+  loading: {
+    margin: "6rem",
+    fontSize: "1.5rem",
+    color: "rgb(84, 138, 91)",
+  },
+
   titleContainer: {
-    paddingTop: "8rem",
+    paddingTop: "2rem",
     width: "90%",
   },
 

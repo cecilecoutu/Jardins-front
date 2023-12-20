@@ -27,7 +27,7 @@ function RegionBourgogne(props) {
   }, []);
 
   if (!jardins) {
-    return <div>Loading...</div>;
+    return <div style={styles.loading}>Loading...</div>;
   }
 
   // Filtrer les jardins de la région Bourgogne
@@ -47,6 +47,12 @@ function RegionBourgogne(props) {
   );
 }
 const styles = {
+  loading: {
+    margin: "6rem",
+    fontSize: "1.5rem",
+    color: "rgb(84, 138, 91)",
+  },
+
   titleContainer: {
     paddingTop: "8rem",
     width: "90%",

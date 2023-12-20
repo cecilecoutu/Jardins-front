@@ -10,6 +10,16 @@ function GardenDetails() {
 
   const [gardenDetails, setGardenDetails] = useState();
   const styles = {
+    Détails: {
+      color: "rgb(84, 138, 91)",
+      fontSize: "10rem",
+    },
+
+    loading: {
+      margin: "6rem",
+      fontSize: "1.5rem",
+      color: "rgb(84, 138, 91)",
+    },
     titleContainer: {
       paddingTop: "8rem",
     },
@@ -78,7 +88,7 @@ function GardenDetails() {
   }, []);
 
   if (!gardenDetails) {
-    return <p>Loading...</p>;
+    return <div style={styles.loading}>Loading...</div>;
   }
 
   const Jardin = ({ jardin }) => (
@@ -105,7 +115,9 @@ function GardenDetails() {
               </p>
               <p>Type de jardin: {jardin.fields.types}</p>
 
-              <Link to={`/jardins/${jardin.id}`}>Détails</Link>
+              <div style={styles.Détails}>
+                <Link to={`/jardins/${jardin.id}`}>Détails</Link>
+              </div>
             </div>
           </div>
         </div>

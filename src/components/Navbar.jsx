@@ -16,9 +16,9 @@ function Navbar(props) {
       margin: "0 auto",
       display: "flex",
       justifyContent: "space-around",
-
       backgroundColor: "rgb(84, 138, 91)",
       backgroundSize: "cover",
+      boxShadow: "0.2rem 0.2rem 0.2rem lightgreen",
     },
   };
 
@@ -34,16 +34,6 @@ function Navbar(props) {
         <br></br>
         <div style={{ color: "white", fontSize: "0.9rem" }}>
           Inspiration du jour
-        </div>
-      </Link>
-      <Link to={"/nouveau-jardin"}>
-        <img
-          src={NewGarden}
-          alt="nouveau jardin à labelliser"
-          style={{ width: "1.5rem" }}
-        />
-        <div style={{ color: "white", fontSize: "0.9rem" }}>
-          Labelliser un nouveau jardin
         </div>
       </Link>
     </nav>

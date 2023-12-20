@@ -27,7 +27,7 @@ function RegionCentreValdeLoire(props) {
   }, []);
 
   if (!jardins) {
-    return <div>Loading...</div>;
+    return <div style={styles.loading}>Loading...</div>;
   }
 
   // Filtrer les jardins de la région Centre-Val de Loire
@@ -48,6 +48,15 @@ function RegionCentreValdeLoire(props) {
 }
 
 const styles = {
+  Détails: {
+    color: "red",
+  },
+  loading: {
+    margin: "6rem",
+    fontSize: "1.5rem",
+    color: "rgb(84, 138, 91)",
+  },
+
   titleContainer: {
     paddingTop: "8rem",
     width: "90%",
@@ -122,7 +131,9 @@ const Jardin = ({ jardin }) => (
             <p>Année d'obtention du label: {jardin.fields.annee_d_obtention}</p>
             <p>Type de jardin: {jardin.fields.types}</p>
 
-            <Link to={`/jardins/${jardin.id}`}>Détails</Link>
+            <div style={styles.Détails}>
+              <Link to={`/jardins/${jardin.id}`}>Détails</Link>
+            </div>
           </div>
         </div>
       </div>
