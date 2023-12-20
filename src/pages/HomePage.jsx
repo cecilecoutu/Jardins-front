@@ -101,6 +101,10 @@ function HomePage(props) {
       justifyContent: "center",
     },
 
+    placeItemHover: {
+      color: "#747bff",
+    },
+
     titleContainer: {
       paddingTop: "8rem",
     },
@@ -111,7 +115,7 @@ function HomePage(props) {
       margin: "1rem",
       padding: "1rem",
       backgroundColor: "white",
-
+      boxShadow: "0.25rem 0.25rem 0.25rem pink",
       boxSizing: "content-box",
       borderRadius: "1rem",
     },
