@@ -127,6 +127,7 @@ function GardenDetails() {
 
   return (
     <div>
+      <Jardin key={index} jardin={Jardin} />
       <div style={styles.listContainer}>
         <div style={styles.borderContainer}>
           <div style={styles.cardImage}></div>
