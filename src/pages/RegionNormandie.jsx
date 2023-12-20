@@ -125,8 +125,14 @@ const Jardin = ({ jardin }) => (
             <p>Adresse complète: {jardin.fields.adresse_complete}</p>
             <p>Année d'obtention du label: {jardin.fields.annee_d_obtention}</p>
             <p>Type de jardin: {jardin.fields.types}</p>
-
-            <Link to={`/jardins/${jardin.id}`}>Détails</Link>
+            <div style={styles.Détails}>
+              <Link
+                to={`/jardins/${jardin.id}`}
+                style={{ color: "lightGreen" }}
+              >
+                Détails
+              </Link>
+            </div>
           </div>
         </div>
       </div>

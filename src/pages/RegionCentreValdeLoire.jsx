@@ -48,9 +48,6 @@ function RegionCentreValdeLoire(props) {
 }
 
 const styles = {
-  Détails: {
-    color: "red",
-  },
   loading: {
     margin: "6rem",
     fontSize: "1.5rem",
@@ -132,7 +129,12 @@ const Jardin = ({ jardin }) => (
             <p>Type de jardin: {jardin.fields.types}</p>
 
             <div style={styles.Détails}>
-              <Link to={`/jardins/${jardin.id}`}>Détails</Link>
+              <Link
+                to={`/jardins/${jardin.id}`}
+                style={{ color: "lightGreen" }}
+              >
+                Détails
+              </Link>
             </div>
           </div>
         </div>

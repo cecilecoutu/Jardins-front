@@ -276,13 +276,16 @@ function HomePage(props) {
           </Link>
         </div>
       </div>
-      <a
-        href={
-          "https://www.data.gouv.fr/fr/datasets/liste-des-jardins-remarquables/"
-        }
-      >
-        Source: data.gouv.fr
-      </a>
+      <div style={styles.Détails}>
+        <a
+          href={
+            "https://www.data.gouv.fr/fr/datasets/liste-des-jardins-remarquables/"
+          }
+          style={{ color: "lightGreen" }}
+        >
+          Source: data.gouv.fr
+        </a>
+      </div>
     </div>
   );
 }
