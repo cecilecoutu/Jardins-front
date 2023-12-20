@@ -7,6 +7,7 @@ function GardenDetails() {
     "https://les-jardins-remarquables-de-france-ccilnins-projects.vercel.app/jardins";
   const { gardenId } = useParams();
   const navigate = useNavigate();
+  const [jardins, setJardins] = useState();
 
   const [gardenDetails, setGardenDetails] = useState();
   const styles = {
