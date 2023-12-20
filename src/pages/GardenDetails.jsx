@@ -40,6 +40,7 @@ function GardenDetails() {
     },
 
     cardImage: {
+      paddingTop: "3rem",
       display: "flex",
       width: "100%",
       margin: "auto",
@@ -56,6 +57,7 @@ function GardenDetails() {
     },
 
     textContainer: {
+      paddingTop: "5rem",
       flexDirection: "row",
       flexWrap: "wrap",
       justifyContent: "flex-start",
@@ -141,17 +143,17 @@ function GardenDetails() {
 
         <div style={styles.secondBorderContainer}>
           <div style={styles.textContainer}>
-            <div style={styles.textResponsive}></div>
+            <div style={styles.textResponsive}>
+              <h2>{gardenDetails.fields.nom_du_jardin}</h2>
+              <p>Commune: {gardenDetails.fields.commune}</p>
+              <p>Description: {gardenDetails.fields.description}</p>
 
-            <h2>{gardenDetails.fields.nom_du_jardin}</h2>
-            <p>Commune: {gardenDetails.fields.commune}</p>
-            <p>Description: {gardenDetails.fields.description}</p>
-
-            <p>Adresse complète: {gardenDetails.fields.adresse_complete}</p>
-            <p>
-              Adresse de l'entrée au public:{" "}
-              {gardenDetails.fields.adresse_de_l_entree_du_public}
-            </p>
+              <p>Adresse complète: {gardenDetails.fields.adresse_complete}</p>
+              <p>
+                Adresse de l'entrée au public:{" "}
+                {gardenDetails.fields.adresse_de_l_entree_du_public}
+              </p>
+            </div>
           </div>
         </div>
       </div>
