@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.body {
+  color: "red";
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
