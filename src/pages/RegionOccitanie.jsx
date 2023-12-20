@@ -122,7 +122,6 @@ const Jardin = ({ jardin }) => (
             <h2>{jardin.fields.nom_du_jardin}</h2>
             <p>Région: {jardin.fields.region}</p>
             <p>Département: {jardin.fields.departement}</p>
-            <p>Adresse complète: {jardin.fields.adresse_complete}</p>
             <p>Année d'obtention du label: {jardin.fields.annee_d_obtention}</p>
             <p>Type de jardin: {jardin.fields.types}</p>
             <div style={styles.Détails}>
