@@ -290,6 +290,17 @@ function HomePage(props) {
           Source: data.gouv.fr
         </a>
       </div>
+      <div
+        style={{
+          ...styles.Détails,
+          color: "white",
+          textAlign: "right",
+          marginRight: "2rem",
+          paddingBottom: "2rem",
+        }}
+      >
+        Décembre 2023
+      </div>
     </div>
   );
 }

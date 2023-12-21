@@ -43,8 +43,8 @@ function RandomGarden(props) {
 
       <div style={styles.titleContainer}>
         <h3>
-          Inspiration du jour : découvrez une suggestion pour vos prochaines
-          vacances !
+          Inspiration du jour : découvrez une suggestion de visite pour vos
+          prochaines vacances !
         </h3>
       </div>
 

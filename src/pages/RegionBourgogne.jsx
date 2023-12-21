@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import Localisation from "../assets/location-svgrepo-com (1).svg";
+import Label from "../assets/label-svgrepo-com.svg";
+import Type from "../assets/garden-svgrepo-com.svg";
 
 function RegionBourgogne(props) {
   const API_URL =
@@ -121,10 +124,47 @@ const Jardin = ({ jardin }) => (
         <div style={styles.textContainer}>
           <div style={styles.textResponsive}>
             <h2>{jardin.fields.nom_du_jardin}</h2>
-            <p>Région: {jardin.fields.region}</p>
-            <p>Département: {jardin.fields.departement}</p>
-            <p>Année d'obtention du label: {jardin.fields.annee_d_obtention}</p>
-            <p>Type de jardin: {jardin.fields.types}</p>
+            <div>
+              <img
+                src={Localisation}
+                style={{
+                  width: "1.5rem",
+                  paddingRight: "1rem",
+                }}
+                alt="Localisation"
+              />
+              Région: {jardin.fields.region}
+            </div>
+            <div>
+              <img
+                src={Localisation}
+                style={{
+                  width: "1.5rem",
+                  paddingRight: "1rem",
+                  paddingTop: "1rem",
+                }}
+                alt="Localisation"
+              />
+              Département: {jardin.fields.departement}
+            </div>
+            <div>
+              <img
+                src={Label}
+                style={{
+                  width: "1.5rem",
+                  paddingRight: "2rem",
+                  paddingTop: "1rem",
+                }}
+              ></img>
+              Année d'obtention du label: {jardin.fields.annee_d_obtention}
+            </div>
+            <div>
+              <img
+                src={Type}
+                style={{ width: "1.5rem", paddingRight: "1rem" }}
+              ></img>
+              Type de jardin: {jardin.fields.types}
+            </div>
 
             <div style={styles.Détails}>
               <Link
