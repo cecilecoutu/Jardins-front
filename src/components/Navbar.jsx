@@ -2,7 +2,8 @@ import React from "react";
 import Home from "../assets/home.webp";
 import { Link } from "react-router-dom";
 import Inspiration from "../assets/light-bulb-idea-svgrepo-com.svg";
-import NewGarden from "../assets/tree-decidious-svgrepo-com.svg";
+import About from "../assets/about-filled-svgrepo-com.svg";
+import Highlights from "../assets/highlights-svgrepo-com.svg";
 
 function Navbar(props) {
   const styles = {
@@ -29,12 +30,20 @@ function Navbar(props) {
         <br></br>
         <div style={{ color: "white", fontSize: "0.9rem" }}>Home</div>
       </Link>
+      <Link to={"/about"}>
+        <img src={About} alt="about" style={{ width: "1.5rem" }} />
+        <div style={{ color: "white", fontSIze: "0.9rem" }}>About</div>
+      </Link>
       <Link to={"/inspiration-du-jour"}>
         <img src={Inspiration} alt="inspiration" style={{ width: "1.5rem" }} />
         <br></br>
         <div style={{ color: "white", fontSize: "0.9rem" }}>
           Inspiration du jour
         </div>
+      </Link>
+      <Link to={"/best-places"}>
+        <img src={Highlights} alt="best-places" style={{ width: "1.5rem" }} />
+        <div style={{ color: "white", fontSIze: "0.9rem" }}>Best places</div>
       </Link>
     </nav>
   );
