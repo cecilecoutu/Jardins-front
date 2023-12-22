@@ -11,3 +11,5 @@ NB : le modèle de données évolue à partir du 1er février 2023. Le code iden
 * Pourquoi ?
 
 Vous voyagez à travers la France et souhaitez visiter, arpenter les lieux naturels reconnus comme exceptionnels ? Cette API propose des lieux de visite, par région, par département et par type de jardin.
+
+En savoir plus => Présentatio : https://www.canva.com/design/DAF3ncH__sU/N-gJdN1EkMLDMcc0Ja-xWA/edit?utm_content=DAF3ncH__sU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
