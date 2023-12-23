@@ -84,7 +84,7 @@ const styles = {
   },
 
   secondBorderContainer: {
-    width: "40%",
+    width: "35%",
     margin: "1rem",
     marginBottom: "1rem",
     padding: "1rem",

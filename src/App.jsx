@@ -2,6 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import RandomGarden from "./pages/RandomGarden";
 import GardenDetails from "./pages/GardenDetails";
+import About from "./pages/About";
+import BestPlaces from "./pages/BestPlaces";
 import RegionAuvergneRhoneAlpes from "./pages/RegionAuvergne-Rhone-Alpes";
 import RegionBretagne from "./pages/RegionBretagne";
 import RegionBourgogne from "./pages/RegionBourgogne";
@@ -29,6 +31,8 @@ function App(props) {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/inspiration-du-jour" element={<RandomGarden />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/best-places" element={<BestPlaces />} />
         <Route path="/region-auvergne" element={<RegionAuvergneRhoneAlpes />} />
         <Route path="/jardins/:gardenId" element={<GardenDetails />} />
         <Route path="/region-bretagne" element={<RegionBretagne />} />

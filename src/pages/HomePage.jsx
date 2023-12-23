@@ -101,10 +101,6 @@ function HomePage(props) {
       justifyContent: "center",
     },
 
-    placeItemHover: {
-      color: "#747bff",
-    },
-
     titleContainer: {
       paddingTop: "8rem",
     },
@@ -279,16 +275,6 @@ function HomePage(props) {
             Provence Alpes-Côtes-d'Azur
           </Link>
         </div>
-      </div>
-      <div style={styles.Détails}>
-        <a
-          href={
-            "https://www.data.gouv.fr/fr/datasets/liste-des-jardins-remarquables/"
-          }
-          style={{ color: "lightGreen" }}
-        >
-          Source: data.gouv.fr
-        </a>
       </div>
       <div
         style={{
